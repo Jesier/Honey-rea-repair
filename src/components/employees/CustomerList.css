@@ -1,0 +1,14 @@
+.customers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.customer {
+    background-color: aliceblue;
+    border: 2px dotted burlywood;
+    color: blue;
+    padding: .5rem;
+    margin: .5rem;
+}

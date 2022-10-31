@@ -2,19 +2,12 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 export const TicketForm = () => {
-    /*
-        TODO: Add the correct default properties to the
-        initial state object
-    */
     const [ticket, update] = useState({
         description: "",
         emergency: false
 
     })
-    /*
-        TODO: Use the useNavigation() hook so you can redirect
-        the user to the ticket list
-    */
+   
 
     const localHoneyUser = localStorage.getItem("honey_user")
     const honeyUserObject = JSON.parse(localHoneyUser)
@@ -23,11 +16,6 @@ export const TicketForm = () => {
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
         
-        // "userId": 1,
-        // "description": "Pariatur nihil animi eos doloremque laborum fugiat consequuntur iusto. Et tempore a enim.",
-        // "emergency": true,
-        // "dateCompleted": "Fri Apr 29 2022 21:24:29 GMT-0500 (Central Daylight Time)"
-        // TODO: Create the object to be saved to the API
 
         const ticketToSendToApi = {
             userId: honeyUserObject.id,
